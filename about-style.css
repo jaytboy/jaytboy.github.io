@@ -1,0 +1,19 @@
+@import url(style.css);
+
+main{
+    padding: 1em 1em 1em 1em;
+}
+
+main > h1{
+    width: 100vw;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+main > h2{
+    padding-bottom: 1em;
+}
+
+main > ul{
+    margin-left: 2em;
+}
