@@ -38,7 +38,6 @@ flex-wrap: wrap;
 
 .cert-card{
     width: 300px;
-    min-width: 300px;
     height: 300px;
     margin: 20px;
     background-color: #333;
