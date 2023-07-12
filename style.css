@@ -52,8 +52,8 @@ nav {
 }
 
 #logo {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   display: block;
   text-decoration: none;
   width: 200px;
@@ -109,20 +109,28 @@ nav ul li:hover a {
   text-decoration: none;
   color: #0054a8;
 }
-main {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 225, 0.8)
-    ),
-    var(--image-url) center center;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 70vh;
-}
 
 footer{
   padding: 1em 1em 1em 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
+}
+
+footer > div > p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.right-border{
+border-right: solid black .1em;
+}
+
+#address{
+  text-align: right;
 }
