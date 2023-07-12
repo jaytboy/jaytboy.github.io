@@ -1,5 +1,16 @@
 @import url(style.css);
 
+main {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 225, 0.8)
+    ),
+    var(--image-url) center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 70vh;
+}
+
 section {
     padding: 2em 60px 2em 60px;
     display: flex;
@@ -26,7 +37,7 @@ section {
   .section-title{
     width: 100vw;
     padding: 1em 0 1em 0;
-    background-color: white;
+    background-color: #A7C7E7;
     text-align: center;
   }
   
@@ -35,7 +46,7 @@ section {
   #services {
     margin: 0;
     padding: 4em 0 4em 0;
-    background-color: white;
+    background-color: #A7C7E7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +142,12 @@ section {
   #quote{
     margin: 0;
     padding: 8em 0 8em 0;
+    text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+  }
+
+  iframe{
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   }
