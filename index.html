@@ -16,23 +16,31 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Town & Country - Auto Body & Paint</title>
   </head>
   <body>
-    <nav>
-      <div id="logo">
-        <div>
-          <h1>TOWN & COUNTRY</h1>
-          <h2>Auto Body & Paint</h2>
+    <nav class="menu">
+      <div id="logo-burger">
+        <div id="logo" data-location="index.html">
+          <div>
+            <h1>TOWN & COUNTRY</h1>
+            <h2>Auto Body & Paint</h2>
+          </div>
         </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <span class="material-symbols-outlined"> menu </span>
+        </a>
       </div>
-      <div class="menu">
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+
+      <div id="my-menu-links" class="menu-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
       </div>
-      
     </nav>
     <main>
       <section id="intro">
@@ -51,84 +59,168 @@
       </section>
       <h2 class="section-title">Services</h2>
       <section id="services">
-        
-        <div class="services">
-        <div class="card">
-          <article class="front-card">
-            <div class="content">
-              <span class="material-symbols-outlined" style="font-size: 48px">
-                car_crash
-              </span>
-              <h3>Collision Repair</h3>
-            </div>
-          </article>
-          <article class="back-card">
-            <div class="content">
-              <p>
-                We provide Full Collision Repair Services to return your vehicle
-                back to the way it looked before the collision.
-              </p>
-            </div>
-          </article>
+        <div class="services full-desktop">
+          <div class="card">
+            <article class="front-card">
+              <div class="content">
+                <span class="material-symbols-outlined" style="font-size: 48px">
+                  car_crash
+                </span>
+                <h3>Collision Repair</h3>
+              </div>
+            </article>
+            <article class="back-card">
+              <div class="content">
+                <p>
+                  We provide Full Collision Repair Services to return your
+                  vehicle back to the way it looked before the collision.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="card">
+            <article class="front-card">
+              <div class="content">
+                <span class="material-symbols-outlined" style="font-size: 48px">
+                  brush
+                </span>
+                <h3>Paint</h3>
+              </div>
+            </article>
+            <article class="back-card">
+              <div class="content">
+                <p>
+                  Whether you need a touch-up or a complete makeover, we have
+                  the skills and equipment to make your vehicle shine.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="card">
+            <article class="front-card">
+              <div class="content">
+                <span class="material-symbols-outlined" style="font-size: 48px">
+                  garage
+                </span>
+                <h3>Restorations</h3>
+              </div>
+            </article>
+            <article class="back-card">
+              <div class="content">
+                <p>
+                  If you want to restore your old classic, come in and share
+                  your dream with us and we will see about making it happen.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="card">
-          <article class="front-card">
-            <div class="content">
-              <span class="material-symbols-outlined" style="font-size: 48px">
-                brush
-              </span>
-              <h3>Paint</h3>
-            </div>
-          </article>
-          <article class="back-card">
-            <div class="content">
-              <p>
-                Whether you need a touch-up or a complete makeover, we have the
-                skills and equipment to make your vehicle shine.
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="card">
-          <article class="front-card">
-            <div class="content">
-              <span class="material-symbols-outlined" style="font-size: 48px">
-                garage
-              </span>
-              <h3>Restorations</h3>
-            </div>
-          </article>
-          <article class="back-card">
-            <div class="content">
-              <p>
-                If you want to restore your old classic, come in and share your
-                dream with us and we will see about making it happen.
-              </p>
-            </div>
-          </article>
-        </div>
+        <!-- Modile area -->
+        <div class="mobile">
+          <div class="accordion">
+            <span class="material-symbols-outlined" style="font-size: 48px">
+              car_crash
+            </span>
+            <h3>Collision Repair</h3>
+          </div>
+          <div class="panel">
+            <p>
+              We provide Full Collision Repair Services to return your vehicle
+              back to the way it looked before the collision.
+            </p>
+          </div>
+          <div class="accordion">
+            <span class="material-symbols-outlined" style="font-size: 48px">
+              brush
+            </span>
+            <h3>Paint</h3>
+          </div>
+          <div class="panel">
+            <p>
+              Whether you need a touch-up or a complete makeover, we have the
+              skills and equipment to make your vehicle shine.
+            </p>
+          </div>
+          <div class="accordion">
+            <span class="material-symbols-outlined" style="font-size: 48px">
+              garage
+            </span>
+            <h3>Restorations</h3>
+          </div>
+          <div class="panel">
+            <p>
+              If you want to restore your old classic, come in and share your
+              dream with us and we will see about making it happen.
+            </p>
+          </div>
         </div>
       </section>
       <section id="quote">
-        <h2>Call for a quote!<br><a href="tel:+15092453757">(509) 245-3757</a></h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.2402160165049!2d-117.37834980152554!3d47.429337488341375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549e312dc831e977%3A0x7708cd656a4d2c87!2sTown%20%26%20Country%20Auto%20Body!5e0!3m2!1sen!2sus!4v1689135557840!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2>
+          Call for a quote!<br /><a href="tel:+15092453757">(509) 245-3757</a>
+        </h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.2402160165049!2d-117.37834980152554!3d47.429337488341375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549e312dc831e977%3A0x7708cd656a4d2c87!2sTown%20%26%20Country%20Auto%20Body!5e0!3m2!1sen!2sus!4v1689135557840!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
     </main>
     <footer>
       <div>
         <p class="right-border" id="address">
           <a
-          href="https://www.google.com/maps/place/Town+%26+Country+Auto+Body/@47.4292981,-117.3795437,20z/data=!4m6!3m5!1s0x549e312dc831e977:0x7708cd656a4d2c87!8m2!3d47.429295!4d-117.3791461!16s%2Fg%2F1tgzb1wc?entry=ttu"
-          >200 N Main St<br/>Spangle, WA 99031</a>
+            href="https://www.google.com/maps/place/Town+%26+Country+Auto+Body/@47.4292981,-117.3795437,20z/data=!4m6!3m5!1s0x549e312dc831e977:0x7708cd656a4d2c87!8m2!3d47.429295!4d-117.3791461!16s%2Fg%2F1tgzb1wc?entry=ttu"
+            >200 N Main St<br />Spangle, WA 99031</a
+          >
         </p>
         <p>
-        <a href="tel:+15092453757">(509) 245-3757</a>
+          <a href="tel:+15092453757">(509) 245-3757</a>
         </p>
-        
       </div>
       <div>
         <p>Copyright 2023 | <a href="#">A Cat Invented Internet</a></p>
       </div>
     </footer>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("my-menu-links");
+        if (x.className === "menu-links") {
+          x.className += " show-menu";
+        } else {
+          x.className = "menu-links";
+        }
+      };
+      (function($) {
+    
+    var allPanels = $('.panel').hide();
+    var allAcc = $('.accordion')
+      
+    $('.accordion').click(function() {
+        $this = $(this);
+        $target =  $this.next();
+  
+        if(!$target.hasClass('active')){
+           allPanels.removeClass('active').slideUp();
+          allAcc.removeClass('active')
+           $target.addClass('active').slideDown();
+          $this.addClass('active')
+        }
+        
+      return false;
+    });
+
+    $("#logo").click(function() {
+      window.location = $("#logo").data("location"); 
+  return false;
+});
+  
+  })(jQuery);
+    </script>
   </body>
 </html>
