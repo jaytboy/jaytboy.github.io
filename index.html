@@ -172,15 +172,19 @@
     </main>
     <footer>
       <div>
-        <p class="right-border" id="address">
-          <a
-            href="https://www.google.com/maps/place/Town+%26+Country+Auto+Body/@47.4292981,-117.3795437,20z/data=!4m6!3m5!1s0x549e312dc831e977:0x7708cd656a4d2c87!8m2!3d47.429295!4d-117.3791461!16s%2Fg%2F1tgzb1wc?entry=ttu"
-            >200 N Main St<br />Spangle, WA 99031</a
-          >
-        </p>
-        <p>
-          <a href="tel:+15092453757">(509) 245-3757</a>
-        </p>
+        <div class="contact">
+          <p class="right-border" id="address">
+            <a
+              href="https://www.google.com/maps/place/Town+%26+Country+Auto+Body/@47.4292981,-117.3795437,20z/data=!4m6!3m5!1s0x549e312dc831e977:0x7708cd656a4d2c87!8m2!3d47.429295!4d-117.3791461!16s%2Fg%2F1tgzb1wc?entry=ttu"
+              >200 N Main St<br />Spangle, WA 99031</a
+            >
+          </p>
+          <p>
+            <a href="tel:+15092453757">(509) 245-3757</a>
+          </p>
+        </div>
+        <p>Business Hours:</p>
+        <p>Monday - Friday: 8am - 5pm</p>
       </div>
       <div>
         <p>Copyright 2023 | <a href="#">A Cat Invented Internet</a></p>
@@ -200,7 +204,14 @@
     
     var allPanels = $('.panel').hide();
     var allAcc = $('.accordion')
-      
+        var firstAcc = $('.mobile:first-child');
+        var firstPanel = firstAcc.next();
+
+        $(document).ready(function() {
+          firstAcc.addClass('active').slideDown();
+          firstPanel.addClass('active');
+        });
+        
     $('.accordion').click(function() {
         $this = $(this);
         $target =  $this.next();
