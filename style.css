@@ -75,6 +75,7 @@ nav {
 }
 
 #logo > div {
+  width: 100%;
   background: white;
 }
 
@@ -110,45 +111,53 @@ nav {
   box-shadow: 0 -4px 0 0px inset;
 }
 
-.menu a.icon {
+a#burger-menu {
   display: none;
 }
 
 footer {
   padding: 1em;
-  padding-bottom: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 
-footer > div {
-  display: flex;
-  align-items: center;
-padding-bottom: 1em;
+footer div {
+  min-width: 335px;
 }
 
-footer > div > p {
-  padding-left: 1em;
-  padding-right: 1em;
+footer div div.contact {
+  padding-bottom: 0.5em;
+  display: flex;
+  align-items: center;
 }
 
 .right-border {
   border-right: solid black 0.1em;
+  text-align: right;
+  padding-right: 0.5em;
 }
 
-#address {
-  text-align: right;
+#phone {
+  padding-left: 0.5em;
+}
+
+#hours {
+  padding-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
   nav {
     flex-direction: column;
   }
 
-  .menu a.icon {
-    display: block;
+  a#burger-menu {
+    display: flex;
+    align-items: center;
   }
 
   #my-menu-links {
