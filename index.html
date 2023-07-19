@@ -32,7 +32,7 @@
             <h2>Auto Body & Paint</h2>
           </div>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a id="burger-menu" class="icon">
           <span class="material-symbols-outlined"> menu </span>
         </a>
       </div>
@@ -50,10 +50,9 @@
             Please visit the listing at
             <a
               href="http://https://www.loopnet.com/Listing/200-N-Main-St-Spangle-WA/28702660/"
-              >Loopnet - Town and Country Auto Body Building</a
+              >Loopnet - Town and Country Auto Body Building.</a
             >
-            and get in contact with <b>Dana Pendergrass</b> for more
-            information.
+            Contact <b>Dana Pendergrass</b> for more information.
           </p>
         </div>
       </section>
@@ -123,7 +122,7 @@
             </span>
             <h3>Collision Repair</h3>
           </div>
-          <div class="panel">
+          <div id="first-panel" class="panel">
             <p>
               We provide Full Collision Repair Services to return your vehicle
               back to the way it looked before the collision.
@@ -171,7 +170,7 @@
       </section>
     </main>
     <footer>
-      <div>
+      <div class="left-side">
         <div class="contact">
           <p class="right-border" id="address">
             <a
@@ -179,59 +178,54 @@
               >200 N Main St<br />Spangle, WA 99031</a
             >
           </p>
-          <p>
+          <p id="phone">
             <a href="tel:+15092453757">(509) 245-3757</a>
           </p>
         </div>
         <p>Business Hours:</p>
-        <p>Monday - Friday: 8am - 5pm</p>
+        <p id="hours">Monday - Friday: 8am - 5pm</p>
       </div>
-      <div>
+      <div class="right-side">
         <p>Copyright 2023 | <a href="#">A Cat Invented Internet</a></p>
       </div>
     </footer>
 
     <script>
-      function myFunction() {
-        var x = document.getElementById("my-menu-links");
-        if (x.className === "menu-links") {
-          x.className += " show-menu";
-        } else {
-          x.className = "menu-links";
-        }
-      };
-      (function($) {
-    
-    var allPanels = $('.panel').hide();
-    var allAcc = $('.accordion')
-        var firstAcc = $('.mobile:first-child');
-        var firstPanel = firstAcc.next();
+      // function myFunction() {
+      //   var x = document.getElementById("my-menu-links");
+      //   if (x.className === "menu-links") {
+      //     x.className += " show-menu";
+      //   } else {
+      //     x.className = "menu-links";
+      //   }
+      // }
 
-        $(document).ready(function() {
-          firstAcc.addClass('active').slideDown();
-          firstPanel.addClass('active');
-        });
-        
-    $('.accordion').click(function() {
+      var accordions = $(".accordion");
+      var panels = $(".panel");
+
+      $(document).ready(function () {
+        panels.hide();
+        $("#first-panel").addClass("active").show();
+        $("#first-panel").prev().addClass("active");
+      });
+
+      $(".accordion").click(function () {
         $this = $(this);
-        $target =  $this.next();
-  
-        if(!$target.hasClass('active')){
-           allPanels.removeClass('active').slideUp();
-          allAcc.removeClass('active')
-           $target.addClass('active').slideDown();
-          $this.addClass('active')
-        }
-        
-      return false;
-    });
+        $target = $this.next();
 
-    $("#logo").click(function() {
-      window.location = $("#logo").data("location"); 
-  return false;
-});
-  
-  })(jQuery);
+        if (!$target.hasClass("active")) {
+          panels.removeClass("active").slideUp();
+          accordions.removeClass("active");
+          $target.addClass("active").slideDown();
+          $this.addClass("active");
+        }
+
+        return false;
+      });
+
+      $("#burger-menu").click(function () {
+        $("#my-menu-links").toggleClass("show-menu")
+      });
     </script>
   </body>
 </html>
