@@ -20,7 +20,7 @@
             <h2>Auto Body & Paint</h2>
           </div>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a id="burger-menu" class="icon">
           <span class="material-symbols-outlined"> menu </span>
         </a>
       </div>
@@ -121,21 +121,14 @@
       </div>
     </footer>
     <script>
-            function myFunction() {
-              var x = document.getElementById("my-menu-links");
-              if (x.className === "menu-links") {
-                x.className += " show-menu";
-              } else {
-                x.className = "menu-links";
-              }
-            };
-      (function($){
-            $("#logo").click(function() {
-            window.location = $("#logo").data("location");
+      $("#logo").click(function () {
+        window.location = $("#logo").data("location");
         return false;
       });
 
-        })(jQuery);
+      $("#burger-menu").click(function () {
+        $("#my-menu-links").toggleClass("show-menu");
+      });
     </script>
   </body>
 </html>
