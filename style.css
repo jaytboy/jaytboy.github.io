@@ -55,13 +55,13 @@ nav {
 }
 
 #logo {
-  display: block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
   width: 200px;
   min-width: 200px;
   height: var(--logo-height);
-  padding-top: 10px;
   background: rgb(255, 0, 0);
   background: linear-gradient(
     90deg,
